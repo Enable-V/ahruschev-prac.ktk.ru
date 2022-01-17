@@ -13,7 +13,7 @@ use Yii;
  * @property string $title
  * @property string $desc
  * @property string $img_before
- * @property string $img_afrer
+ * @property string $img_after
  * @property int $datetime
  * @property int $post_status
  *
@@ -39,7 +39,7 @@ class Articles extends \yii\db\ActiveRecord
             [['id_category', 'id_author', 'title', 'desc', 'img_before', 'img_afrer', 'datetime', 'post_status'], 'required'],
             [['id_category', 'id_author', 'datetime', 'post_status'], 'integer'],
             [['desc'], 'string'],
-            [['title', 'img_before', 'img_afrer'], 'string', 'max' => 255],
+            [['title', 'img_before', 'img_after'], 'string', 'max' => 255],
             [['id_category'], 'exist', 'skipOnError' => true, 'targetClass' => Categories::className(), 'targetAttribute' => ['id_category' => 'id']],
             [['id_author'], 'exist', 'skipOnError' => true, 'targetClass' => Users::className(), 'targetAttribute' => ['id_author' => 'id']],
         ];
@@ -57,7 +57,7 @@ class Articles extends \yii\db\ActiveRecord
             'title' => Yii::t('app', 'Title'),
             'desc' => Yii::t('app', 'Desc'),
             'img_before' => Yii::t('app', 'Img Before'),
-            'img_afrer' => Yii::t('app', 'Img Afrer'),
+            'img_after' => Yii::t('app', 'Img After'),
             'datetime' => Yii::t('app', 'Datetime'),
             'post_status' => Yii::t('app', 'Post Status'),
         ];

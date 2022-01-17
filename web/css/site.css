@@ -82,3 +82,63 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.page-item span {
+    display: none;
+}
+
+.image-comparison {
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    width: 100%;
+    max-width: 520px;
+    overflow: hidden;
+}
+
+.image-comparison__before {
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+}
+
+.image-comparison__image {
+    display: block;
+}
+
+/* Ползунок */
+.image-comparison__slider {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100%;
+    cursor: col-resize;
+    outline: none;
+    border: none;
+}
+
+/* Стрелки */
+.image-comparison__slider::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    left: -14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent url('/images/arrows2.png') no-repeat center;
+    border: 2px solid #fff;
+    background-size: 90%;
+}
+
+.image-comprison__slider:hover,
+.image-comprison__slider:focus,
+.image-comprison__slider:hover::before,
+.image-comprison__slider:focus::before {
+    background-color: #ccc;
+    outline: none;
+    border: none;
+}
+
