@@ -65,9 +65,9 @@ class ArticleForm extends Model
     {
         $file = UploadedFile::getInstance($this,'img_before');
         if($file && $file->tempName){
-            $dir = Yii::getAlias('@webroot').'/uploads';
+            $dir = Yii::getAlias('@webroot').'/uploads/';
             if(!is_dir($dir)) mkdir($dir,0777);
-            $file_name = md5(microtime().uniqid().'.'.$file->extension);
+            $file_name = md5(microtime().uniqid()).'.'.$file->extension;
             $file->saveAs($dir.$file_name);
             $article = new Articles();
             $article->title = $this->title;

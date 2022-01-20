@@ -133,10 +133,10 @@ a.desc:after {
     background-size: 90%;
 }
 
-.image-comprison__slider:hover,
-.image-comprison__slider:focus,
-.image-comprison__slider:hover::before,
-.image-comprison__slider:focus::before {
+.image-comparison__slider:hover,
+.image-comparison__slider:focus,
+.image-comparison__slider:hover::before,
+.image-comparison__slider:focus::before {
     background-color: #ccc;
     outline: none;
     border: none;

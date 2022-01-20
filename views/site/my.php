@@ -51,8 +51,8 @@ $GLOBALS['script'] = '';
 <div class="row">
     <div class="col-md-4">
         <div id="image-comparison{$model->id}">
-            <img src="/uploads/{$model->img_before}" alt="{$model->title}" />
-            <img height="200px" width="200px" src="/uploads/default.jpg" alt="{$model->title}" />
+            <img height="200px" width="200px" src="/uploads/{$model->img_before}" alt="{$model->title}" />
+            <img src="/uploads/{$model->img_after}" alt="{$model->title}" />
         </div>
     </div>
     <div class="col-md-8">
